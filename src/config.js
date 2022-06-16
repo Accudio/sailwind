@@ -8,20 +8,20 @@ module.exports = {
   utilities: {
     // padding
     p: ['padding'],
-    'pl-': ['padding-left'],
-    'pr-': ['padding-right'],
-    'pt-': ['padding-top'],
-    'pb-': ['padding-bottom'],
-    'py-': ['padding-top', 'padding-bottom'],
+    'pl': ['padding-left'],
+    'pr': ['padding-right'],
+    'pt': ['padding-top'],
+    'pb': ['padding-bottom'],
+    'py': ['padding-top', 'padding-bottom'],
     px: ['padding-left', 'padding-right'],
 
     // margin
     m: ['margin'],
-    'ml-': ['margin-left'],
-    'mr-': ['margin-right'],
-    'mt-': ['margin-top'],
-    'mb-': ['margin-bottom'],
-    'my-': ['margin-top', 'margin-bottom'],
+    'ml': ['margin-left'],
+    'mr': ['margin-right'],
+    'mt': ['margin-top'],
+    'mb': ['margin-bottom'],
+    'my': ['margin-top', 'margin-bottom'],
     mx: ['margin-left', 'margin-right'],
 
     // sizing

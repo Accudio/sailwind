@@ -150,11 +150,13 @@ const fluidProperties = (config, value, properties = []) => {
  */
 const fluidPlugin = ({ matchUtilities, theme }) => {
   const config = {
+		...defaultConfig,
     ...theme('fluid'),
     screens: theme('screens')
   }
 
   for (let utility in config.utilities) {
+		console.log(`${config.prefix}${utility}`)
     matchUtilities({
       [`${config.prefix}${utility}`]: (value) =>
         fluidProperties(config, value, config.utilities[utility]),
@@ -163,10 +165,6 @@ const fluidPlugin = ({ matchUtilities, theme }) => {
 }
 
 // loop through configured utilities and generate for each
-const fluid = plugin(fluidPlugin, {
-  theme: {
-    fluid: defaultConfig,
-  },
-})
+const fluid = plugin(fluidPlugin)
 
 module.exports = fluid
