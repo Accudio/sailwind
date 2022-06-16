@@ -72,6 +72,8 @@ module.exports = {
 
 ## Changelog
 
+- `0.2.1` &mdash; 16/06/22 &mdash; Fixed default config not loading and some utilities not generating properly
+- `0.2.0` &mdash; 16/06/22 &mdash; Changed prefix to `fl-`
 - `0.1.0` &mdash; 10/06/22 &mdash; Initial release
 
 ## License and Credits
