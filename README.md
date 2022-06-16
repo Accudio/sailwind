@@ -31,9 +31,9 @@ module.exports = {
 
 This plugin uses Just In Time (JIT) to generate fluid version values for all spacing utilities.
 
-In its simplest form, add the class `fluid-px-[20px,64px]`, where in this case `20px` is the size at the minimum configured viewport (`theme.fluid.min`) and `64px` is the size at the maximum configured viewport (`theme.fluid.max`).
+In its simplest form, add the class `fl-px-[20px,64px]`, where in this case `20px` is the size at the minimum configured viewport (`theme.fluid.min`) and `64px` is the size at the maximum configured viewport (`theme.fluid.max`).
 
-You can also specify custom viewports, with `fluid-px-[20px@400px,64px@1440px]`. In this example, when the screen is smaller than  `400px` the padding is `20px`, when the screen is above `1440px` it's `64px`. Between these it will scale with the viewport width.
+You can also specify custom viewports, with `fl-px-[20px@400px,64px@1440px]`. In this example, when the screen is smaller than  `400px` the padding is `20px`, when the screen is above `1440px` it's `64px`. Between these it will scale with the viewport width.
 
 ### Notes:
 

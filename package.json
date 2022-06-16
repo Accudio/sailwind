@@ -1,6 +1,6 @@
 {
   "name": "tailwind-smart-fluid",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Generate fluid spacing within tailwind using CSS clamp and viewport units",
   "main": "src/index.js",
   "scripts": {
