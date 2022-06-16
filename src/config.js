@@ -1,5 +1,5 @@
 module.exports = {
-  prefix: 'fluid-',
+  prefix: 'fl-',
   min: '576px',
   max: '1024px',
   convertUnit: true,
