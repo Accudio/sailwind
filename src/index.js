@@ -156,7 +156,6 @@ const fluidPlugin = ({ matchUtilities, theme }) => {
   }
 
   for (let utility in config.utilities) {
-		console.log(`${config.prefix}${utility}`)
     matchUtilities({
       [`${config.prefix}${utility}`]: (value) =>
         fluidProperties(config, value, config.utilities[utility]),
