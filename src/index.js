@@ -97,9 +97,17 @@ const fluidGenerator = (config, value) => {
   // round to 2 decimal places
   const cRounded = Math.round(c * 100) / 100
 
+  // order the parameters
+  let lower = valMin[0]
+  let higher = valMax[0]
+  if (lower > higher) {
+    lower = valMax[0]
+    higher = valMin[0]
+  }
+
   // generate output
   // eg, clamp(16px, calc(10vw - 24px), 120px)
-  return `clamp(${valMin[0]}${unit}, calc(${mRounded}vw + ${cRounded}${unit}), ${valMax[0]}${unit})`
+  return `clamp(${lower}${unit}, calc(${mRounded}vw + ${cRounded}${unit}), ${higher}${unit})`
 }
 
 // caching object used in getFluid
