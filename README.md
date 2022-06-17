@@ -72,6 +72,7 @@ module.exports = {
 
 ## Changelog
 
+- `0.2.3` &mdash; 17/06/22 &mdash; Fixed clamp output when second parameter is lower than first
 - `0.2.2` &mdash; 16/06/22 &mdash; Removed redundant `console.log`
 - `0.2.1` &mdash; 16/06/22 &mdash; Fixed default config not loading and some utilities not generating properly
 - `0.2.0` &mdash; 16/06/22 &mdash; Changed prefix to `fl-`
