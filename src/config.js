@@ -44,9 +44,16 @@ module.exports = {
     'gap-x': ['column-gap'],
     'gap-y': ['row-gap'],
 
+    // transforms
+    'translate-x': ['--tw-translate-x'],
+    'translate-y': ['--tw-translate-y'],
+
     // misc
     text: ['font-size'],
     basis: ['flex-basis'],
     rounded: ['border-radius'],
+
+    // custom property
+    var: ['--fluid-val']
   },
 }

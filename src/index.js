@@ -141,8 +141,13 @@ const getFluid = (config, value) => {
  * @returns {Object}          object of 'CSS property': fluid
  */
 const fluidProperties = (config, value, properties = []) => {
-  const attVals = properties.map((prop) => [prop, getFluid(config, value)])
+  // if properties is a function then hand off processing to that
+  if (typeof properties === 'function') {
+    return properties(getFluid(config, value))
+  }
 
+  // otherwise do our processing of the array
+  const attVals = properties.map((prop) => [prop, getFluid(config, value)])
   return Object.fromEntries(attVals)
 }
 
@@ -163,10 +168,15 @@ const fluidPlugin = ({ matchUtilities, theme }) => {
     screens: theme('screens')
   }
 
-  for (let utility in config.utilities) {
+  let allUtilities = {
+    ...config.utilities,
+    ...config.extend
+  }
+
+  for (let utility in allUtilities) {
     matchUtilities({
       [`${config.prefix}${utility}`]: (value) =>
-        fluidProperties(config, value, config.utilities[utility]),
+        fluidProperties(config, value, allUtilities[utility]),
     })
   }
 }
