@@ -1,5 +1,5 @@
 module.exports.error = (message) => {
-  console.error('ERROR tailwind-smart-fluid: ' + message)
+  console.error('ERROR sailwind: ' + message)
   return {}
 }
 

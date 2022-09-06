@@ -1,6 +1,6 @@
-# Tailwing Smart Fluid
+# Sailwind
 
-Tailwind plugin that provides smart fluid spacing and typography using CSS `clamp` and viewport units.
+Sailwind is a Tailwind plugin that provides smarter fluid spacing and typography using CSS `clamp` and viewport units.
 
 *This is currently experimental, and hasn't been fully tested. Use at your own risk*
 
@@ -9,7 +9,7 @@ Tailwind plugin that provides smart fluid spacing and typography using CSS `clam
 Install the plugin from npm:
 
 ```sh
-npm install -D tailwind-smart-fluid
+npm install -D sailwind
 ```
 
 Then add the plugin to your `tailwind.config.js` file:
@@ -21,7 +21,7 @@ module.exports = {
     // ...
   },
   plugins: [
-    require('tailwind-smart-fluid'),
+    require('sailwind'),
     // ...
   ],
 }
@@ -29,7 +29,7 @@ module.exports = {
 
 ## Usage
 
-This plugin uses Just In Time (JIT) to generate fluid version values for all spacing utilities.
+Sailwind uses Just In Time (JIT) to generate fluid version values for all spacing utilities.
 
 In its simplest form, add the class `fl-px-[20px,64px]`, where in this case `20px` is the size at the minimum configured viewport (`theme.fluid.min`) and `64px` is the size at the maximum configured viewport (`theme.fluid.max`).
 
@@ -55,13 +55,13 @@ You can also specify custom viewports, with `fl-px-[20px@400px,64px@1440px]`. In
 
 ## Configuration
 
-You can configure the default min and max viewport and whether the plugin should convert breakpoint units under the `fluid` key in your `tailwind.config.js` file:
+You can configure the default min and max viewport and whether the plugin should convert breakpoint units under the `sailwind` key in your `tailwind.config.js` file:
 
 ```js
 // tailwind.config.js
 module.exports = {
   theme: {
-    fluid: {
+    sailwind: {
       min: '400px',
       max: '1440px',
       convertUnit: true,
@@ -84,7 +84,7 @@ module.exports = {
 
 ### Custom utilities
 
-By default Tailwind Smart Fluid generates fluid versions of all default Tailwind spacing utilities.
+By default Sailwind generates fluid versions of all default Tailwind spacing utilities.
 
 It also adds a custom property that can be used for more complex situations—used with `fl-var-[]` and the `--fluid-val` property. This could be used within other property values or extended to other CSS functions.
 
@@ -94,7 +94,7 @@ If this doesn't meet your needs, you can also specify your own utilities in `the
 // tailwind.config.js
 module.exports = {
   theme: {
-    fluid: {
+    sailwind: {
       custom: {
         // specify properties to assign in an array, this will add the 'fl-flow-[]' utility
         'flow': ['--flow-space'],
@@ -112,6 +112,7 @@ module.exports = {
 
 ## Changelog
 
+- `0.4.0` &mdash; 06/09/22 &mdash; Renamed project to Sailwind and changed config key from `fluid` to `sailwind`
 - `0.3.0` &mdash; 29/06/22 &mdash; Added default `--fluid-val` custom property, ability to extend utilities and functional utilities
 - `0.2.3` &mdash; 17/06/22 &mdash; Fixed clamp output when second parameter is lower than first
 - `0.2.2` &mdash; 16/06/22 &mdash; Removed redundant `console.log`

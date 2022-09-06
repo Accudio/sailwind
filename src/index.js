@@ -161,10 +161,10 @@ const fluidProperties = (config, value, properties = []) => {
  * @param {function} tw.matchUtilities  declare new dynamic utilities
  * @param {function} tw.theme           pull config from theme
  */
-const fluidPlugin = ({ matchUtilities, theme }) => {
+const sailwindPlugin = ({ matchUtilities, theme }) => {
   const config = {
 		...defaultConfig,
-    ...theme('fluid'),
+    ...theme('sailwind'),
     screens: theme('screens')
   }
 
@@ -182,6 +182,6 @@ const fluidPlugin = ({ matchUtilities, theme }) => {
 }
 
 // loop through configured utilities and generate for each
-const fluid = plugin(fluidPlugin)
+const sailwind = plugin(sailwindPlugin)
 
-module.exports = fluid
+module.exports = sailwind
